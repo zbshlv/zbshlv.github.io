@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>git主要命令</title>
+    <link href="/2023/12/27/git%E4%B8%BB%E8%A6%81%E5%91%BD%E4%BB%A4/"/>
+    <url>/2023/12/27/git%E4%B8%BB%E8%A6%81%E5%91%BD%E4%BB%A4/</url>
+    
+    <content type="html"><![CDATA[<h3 id="初始化仓库"><a href="#初始化仓库" class="headerlink" title="初始化仓库"></a><strong>初始化仓库</strong></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git init<br></code></pre></td></tr></table></figure><h3 id="克隆仓库"><a href="#克隆仓库" class="headerlink" title="克隆仓库"></a><strong>克隆仓库</strong></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">clone</span> &lt;repository_url&gt;<br></code></pre></td></tr></table></figure><h3 id="添加文件到暂存区"><a href="#添加文件到暂存区" class="headerlink" title="添加文件到暂存区"></a><strong>添加文件到暂存区</strong></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git add &lt;file_name&gt;<br></code></pre></td></tr></table></figure><h3 id="提交更改"><a href="#提交更改" class="headerlink" title="提交更改"></a><strong>提交更改</strong></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git commit -m <span class="hljs-string">&quot;Commit message&quot;</span><br></code></pre></td></tr></table></figure><h3 id="查看状态"><a href="#查看状态" class="headerlink" title="查看状态"></a><strong>查看状态</strong></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git status<br></code></pre></td></tr></table></figure><h3 id="查看提交历史"><a href="#查看提交历史" class="headerlink" title="查看提交历史"></a><strong>查看提交历史</strong></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">log</span><br></code></pre></td></tr></table></figure><h3 id="推送更改到远程仓库"><a href="#推送更改到远程仓库" class="headerlink" title="推送更改到远程仓库"></a><strong>推送更改到远程仓库</strong></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git push &lt;remote_name&gt; &lt;branch_name&gt;<br></code></pre></td></tr></table></figure><h3 id="添加远程仓库地址："><a href="#添加远程仓库地址：" class="headerlink" title="添加远程仓库地址："></a><strong>添加远程仓库地址：</strong></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git remote add origin &lt;repository_url&gt;<br></code></pre></td></tr></table></figure><p><code>&lt;repository_url&gt;</code> 是别人的仓库地址。可以使用 <code>git remote -v</code> 来确认远程仓库是否添加成功。</p><h3 id="拉取最新代码："><a href="#拉取最新代码：" class="headerlink" title="拉取最新代码："></a><strong>拉取最新代码：</strong></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git pull origin &lt;branch_name&gt;<br></code></pre></td></tr></table></figure><p><code>&lt;branch_name&gt;</code> 是你想要拉取代码的分支名。这个命令会从远程仓库（<code>origin</code>）拉取指定分支的最新代码到你的本地仓库。</p><p>这样就能够将别人仓库中的最新代码更新到你的本地工作环境中。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>git</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>git</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>深入学习git</title>
     <link href="/2023/12/23/git%E6%B7%B1%E5%85%A5%E5%AD%A6%E4%B9%A0/"/>
     <url>/2023/12/23/git%E6%B7%B1%E5%85%A5%E5%AD%A6%E4%B9%A0/</url>
