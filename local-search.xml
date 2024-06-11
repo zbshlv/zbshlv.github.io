@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>hexo常用的命令</title>
+    <link href="/2024/06/11/hexo%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%9A%84%E5%91%BD%E4%BB%A4/"/>
+    <url>/2024/06/11/hexo%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%9A%84%E5%91%BD%E4%BB%A4/</url>
+    
+    <content type="html"><![CDATA[<hr><p>Hexo 是一个快速、简单且强大的博客框架，它使用 Node.js 编写。在使用 Hexo 前，你需要先安装 Node.js 和 Git。以下是一些 Hexo 的主要命令：</p><ol><li><p><strong>初始化</strong>:</p><ul><li><code>hexo init [folder]</code>: 在指定的文件夹中初始化一个新的 Hexo 网站。如果不指定文件夹，默认在当前目录下创建。</li></ul></li><li><p><strong>新建</strong>:</p><ul><li><code>hexo new [layout] &lt;title&gt;</code>: 新建一篇文章。其中 <code>layout</code> 是布局（如 <code>post</code>, <code>page</code>），如果省略，默认使用 <code>post</code>。</li></ul></li><li><p><strong>生成静态文件</strong>:</p><ul><li><code>hexo generate</code>: 简写为 <code>hexo g</code>，生成静态文件，默认位于 <code>public</code> 目录。</li></ul></li><li><p><strong>启动服务器</strong>:</p><ul><li><code>hexo server</code>: 简写为 <code>hexo s</code>，启动本地服务器，默认监听在 <code>localhost:4000</code>。这个命令常用于本地预览网站。</li></ul></li><li><p><strong>发布文章</strong>:</p><ul><li><code>hexo deploy</code>: 简写为 <code>hexo d</code>，部署网站到远端服务器。使用之前需要在 <code>_config.yml</code> 配置文件中设置部署选项。</li></ul></li><li><p><strong>清理缓存</strong>:</p><ul><li><code>hexo clean</code>: 清理缓存文件 (<code>db.json</code>) 和已生成的静态文件 (<code>public</code>)。</li></ul></li><li><p><strong>列出网站内容</strong>:</p><ul><li><code>hexo list &lt;type&gt;</code>: 列出网站的文章、页面等。类型可以是 <code>post</code>, <code>page</code>, <code>route</code> 等。</li></ul></li><li><p><strong>版本</strong>:</p><ul><li><code>hexo version</code>: 显示 Hexo 的版本。</li></ul></li></ol><p>这些命令覆盖了 Hexo 的日常使用，从站点的创建、开发到部署。可以通过 <code>hexo help</code> 命令查看更多详细的帮助信息和命令选项。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>hexo</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>hexo</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>git主要命令</title>
     <link href="/2023/12/27/git%E4%B8%BB%E8%A6%81%E5%91%BD%E4%BB%A4/"/>
     <url>/2023/12/27/git%E4%B8%BB%E8%A6%81%E5%91%BD%E4%BB%A4/</url>
