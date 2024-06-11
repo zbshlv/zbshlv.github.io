@@ -4,6 +4,56 @@
   
   
   <entry>
+    <title>hexo撰写文章通常使用 Markdown 语法</title>
+    <link href="/2024/06/11/hexo%E6%92%B0%E5%86%99%E6%96%87%E7%AB%A0%E9%80%9A%E5%B8%B8%E4%BD%BF%E7%94%A8%20Markdown%20%E8%AF%AD%E6%B3%95/"/>
+    <url>/2024/06/11/hexo%E6%92%B0%E5%86%99%E6%96%87%E7%AB%A0%E9%80%9A%E5%B8%B8%E4%BD%BF%E7%94%A8%20Markdown%20%E8%AF%AD%E6%B3%95/</url>
+    
+    <content type="html"><![CDATA[<hr><p>在 Hexo 中，撰写文章通常使用 Markdown 语法，这是一种旨在让写作更为简便的标记语言。以下是一些基本步骤和提示，帮助你在 Hexo 中使用 Markdown 编写文章：</p><ol><li><p><strong>新建文章</strong>：</p><ul><li>使用命令 <code>hexo new [layout] &lt;title&gt;</code> 来创建一篇新文章。例如，<code>hexo new post &quot;My First Post&quot;</code> 会在 <code>source/_posts</code> 文件夹中创建一个新的 Markdown 文件，文件名通常是文章标题的小写，并用连字符代替空格。</li></ul></li><li><p><strong>编辑文章</strong>：</p><ul><li>打开新创建的 Markdown 文件，你可以开始用 Markdown 语法来编写你的内容。Markdown 允许你使用简单的符号来标记文本样式、插入链接、图片、代码块等。</li></ul></li><li><p><strong>Markdown 基本语法</strong>：</p><ul><li><strong>标题</strong>：使用 <code>#</code> 符号来创建标题。例如，<code># 标题 1</code>、<code>## 标题 2</code> 等。</li><li><strong>粗体和斜体</strong>：使用 <code>**粗体**</code> 和 <code>*斜体*</code> 或者 <code>__粗体__</code> 和 <code>_斜体_</code>。</li><li><strong>链接</strong>：使用 <code>[显示文本](链接地址)</code> 来插入链接。</li><li><strong>图片</strong>：使用 <code>![替代文字](图片链接)</code> 来插入图片。</li><li><strong>列表</strong>：<ul><li>无序列表使用星号、加号或减号：<code>* 列表项</code> 或 <code>- 列表项</code>。</li><li>有序列表直接使用数字加点：<code>1. 第一项</code>。</li></ul></li><li><strong>代码</strong>：<ul><li>行内代码使用反引号：<code>`代码`</code>。</li><li>代码块使用三个反引号，也可以指定语言：<code> </code>javascript\n代码块\n<code> </code></li></ul></li></ul></li><li><p><strong>文章元数据（Front-matter）</strong>：</p><ul><li>在文章的最上方，你可以定义一块 YAML 格式的元数据区块，设置文章的参数，如日期、标签、分类等。例如：<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-meta">---</span><br><span class="hljs-attr">title:</span> <span class="hljs-string">My</span> <span class="hljs-string">First</span> <span class="hljs-string">Post</span><br><span class="hljs-attr">date:</span> <span class="hljs-number">2024-06-11 10:00:00</span><br><span class="hljs-attr">tags:</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">Life</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">Technology</span><br><span class="hljs-attr">categories:</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">Personal</span> <span class="hljs-string">Thoughts</span><br><span class="hljs-meta">---</span><br></code></pre></td></tr></table></figure></li></ul></li><li><p><strong>本地预览</strong>：</p><ul><li>在进行较大的编辑或完成文章后，运行 <code>hexo server</code> 来启动本地服务器预览你的文章和整个网站。这是检查文章显示是否符合预期的好方法。</li></ul></li><li><p><strong>保存和部署</strong>：</p><ul><li>完成文章后，保存你的更改。按前述步骤生成静态文件并部署到服务器上。</li></ul></li></ol><p>使用 Markdown 编写 Hexo 文章的好处是你可以专注于内容而不是格式设置。通过简单的语法规则，你可以轻松地结构化你的文章，并在 Web 上呈现出整洁的格式。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>hexo</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>hexo</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>hexo发布和更新文章流程</title>
+    <link href="/2024/06/11/hexo%E5%8F%91%E5%B8%83%E5%92%8C%E6%9B%B4%E6%96%B0%E6%96%87%E7%AB%A0%E6%B5%81%E7%A8%8B/"/>
+    <url>/2024/06/11/hexo%E5%8F%91%E5%B8%83%E5%92%8C%E6%9B%B4%E6%96%B0%E6%96%87%E7%AB%A0%E6%B5%81%E7%A8%8B/</url>
+    
+    <content type="html"><![CDATA[<hr><p>更新文章在 Hexo 网站管理中是一个常见的操作。通常，这个过程包括以下几个步骤：</p><ol><li><p><strong>定位文章</strong>：</p><ul><li>首先，你需要找到你想要更新的文章。在 Hexo 中，文章通常存储在 <code>source/_posts</code> 目录中，每篇文章是一个单独的 Markdown 文件。</li></ul></li><li><p><strong>编辑文章</strong>：</p><ul><li>使用你喜欢的文本编辑器打开 Markdown 文件进行编辑。你可以修改内容、更新日期、添加或删除标签等。</li></ul></li><li><p><strong>本地预览</strong>：</p><ul><li>修改文章后，运行 <code>hexo server</code> （或 <code>hexo s</code>）来启动本地服务器，然后在浏览器中预览你的网站以确保更改显示正确。这一步是检查格式和链接是否正确的好机会。</li></ul></li><li><p><strong>生成静态文件</strong>：</p><ul><li>更新完文章并确认无误后，运行 <code>hexo generate</code> （或 <code>hexo g</code>）来生成新的静态文件。这一步将更新你的 <code>public</code> 目录下的内容。</li></ul></li><li><p><strong>部署到服务器</strong>：</p><ul><li>一旦静态文件生成完成，使用 <code>hexo deploy</code> （或 <code>hexo d</code>）将更新后的网站部署到远程服务器。这个步骤通常会根据你在 <code>_config.yml</code> 文件中的设置，自动将网站推送到如 GitHub Pages 或其他托管服务。</li></ul></li><li><p><strong>清理缓存</strong>（如有需要）：</p><ul><li>如果你觉得有必要（尤其在遇到问题时），可以运行 <code>hexo clean</code> 来清理缓存和 <code>public</code> 目录，然后再生成和部署网站。</li></ul></li></ol><p>这些步骤概括了如何在 Hexo 中更新文章。整个过程强调了预览和验证的重要性，确保所有更改在公开发布前都是正确的。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>hexo</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>hexo</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>hexo常用的命令</title>
     <link href="/2024/06/11/hexo%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%9A%84%E5%91%BD%E4%BB%A4/"/>
     <url>/2024/06/11/hexo%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%9A%84%E5%91%BD%E4%BB%A4/</url>
