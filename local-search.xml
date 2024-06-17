@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>使用SSH连接GitHub与Hexo</title>
+    <link href="/2024/06/17/%E4%BD%BF%E7%94%A8SSH%E8%BF%9E%E6%8E%A5GitHub%E4%B8%8EHexo/"/>
+    <url>/2024/06/17/%E4%BD%BF%E7%94%A8SSH%E8%BF%9E%E6%8E%A5GitHub%E4%B8%8EHexo/</url>
+    
+    <content type="html"><![CDATA[<p>要使用SSH连接GitHub与Hexo，你需要完成几个步骤来设置SSH密钥，并将其添加到你的GitHub账户。这样可以安全地推送和拉取数据，而无需每次都输入用户名和密码。下面是详细步骤：</p><h3 id="步骤-1-生成SSH密钥"><a href="#步骤-1-生成SSH密钥" class="headerlink" title="步骤 1: 生成SSH密钥"></a>步骤 1: 生成SSH密钥</h3><ol><li><p><strong>打开命令行工具</strong>（如Git Bash如果你在Windows上）。</p></li><li><p>输入以下命令生成新的SSH密钥（用你的GitHub电子邮件替换<code>your_email@example.com</code>）：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ssh-keygen -t ed25519 -C <span class="hljs-string">&quot;your_email@example.com&quot;</span><br></code></pre></td></tr></table></figure><p>如果你的系统不支持<code>ed25519</code>算法，你可以使用<code>rsa</code>：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ssh-keygen -t rsa -b 4096 -C <span class="hljs-string">&quot;your_email@example.com&quot;</span><br></code></pre></td></tr></table></figure></li><li><p>当系统提示“Enter a file in which to save the key,”时，按<code>Enter</code>键接受默认文件位置（一般在<code>~/.ssh/id_ed25519</code>或<code>~/.ssh/id_rsa</code>）。</p></li><li><p>在提示时，输入一个安全的密码（可选，但建议设置）。</p></li></ol><h3 id="步骤-2-添加SSH密钥到ssh-agent"><a href="#步骤-2-添加SSH密钥到ssh-agent" class="headerlink" title="步骤 2: 添加SSH密钥到ssh-agent"></a>步骤 2: 添加SSH密钥到ssh-agent</h3><ol><li>确保ssh-agent正在运行：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">eval</span> <span class="hljs-string">&quot;<span class="hljs-subst">$(ssh-agent -s)</span>&quot;</span><br></code></pre></td></tr></table></figure></li><li>添加你的SSH私钥到ssh-agent：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ssh-add ~/.ssh/id_ed25519<br></code></pre></td></tr></table></figure>如果你使用的是RSA密钥，路径可能是<code>~/.ssh/id_rsa</code>。</li></ol><h3 id="步骤-3-将SSH公钥添加到GitHub账户"><a href="#步骤-3-将SSH公钥添加到GitHub账户" class="headerlink" title="步骤 3: 将SSH公钥添加到GitHub账户"></a>步骤 3: 将SSH公钥添加到GitHub账户</h3><ol><li><p>复制SSH公钥到剪贴板。在Windows上，你可以使用：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">clip &lt; ~/.ssh/id_ed25519.pub<br></code></pre></td></tr></table></figure><p>在Linux或macOS上，可以使用：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cat</span> ~/.ssh/id_ed25519.pub | pbcopy<br></code></pre></td></tr></table></figure><p>如果你使用的是RSA密钥，路径可能是<code>~/.ssh/id_rsa.pub</code>。</p></li><li><p>登录到你的GitHub账户。</p></li><li><p>进入“Settings”（设置）&gt; “SSH and GPG keys”（SSH和GPG密钥）&gt; “New SSH key”（新的SSH密钥）。</p></li><li><p>在“Title”（标题）字段中，输入一个描述性名称。</p></li><li><p>在“Key”（密钥）字段中，粘贴你的公钥。</p></li><li><p>点击“Add SSH key”（添加SSH密钥）。</p></li></ol><h3 id="步骤-4-配置Hexo使用SSH"><a href="#步骤-4-配置Hexo使用SSH" class="headerlink" title="步骤 4: 配置Hexo使用SSH"></a>步骤 4: 配置Hexo使用SSH</h3><ol><li>确保你的Hexo <code>_config.yml</code>配置文件中的仓库URL使用SSH格式，例如：<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">deploy:</span><br>  <span class="hljs-attr">type:</span> <span class="hljs-string">git</span><br>  <span class="hljs-attr">repo:</span> <span class="hljs-string">git@github.com:username/repository.git</span><br>  <span class="hljs-attr">branch:</span> <span class="hljs-string">main</span><br></code></pre></td></tr></table></figure>替换<code>username</code>和<code>repository</code>为你的GitHub用户名和仓库名。</li></ol><p>完成这些步骤后，你就可以使用SSH安全地与GitHub通信，进行Hexo的部署操作。如果遇到连接问题，确认你的网络设置允许SSH连接，并且GitHub账户中的密钥正确无误。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>hexo</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>hexo</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>hexo撰写文章通常使用 Markdown 语法</title>
     <link href="/2024/06/11/hexo%E6%92%B0%E5%86%99%E6%96%87%E7%AB%A0%E9%80%9A%E5%B8%B8%E4%BD%BF%E7%94%A8%20Markdown%20%E8%AF%AD%E6%B3%95/"/>
     <url>/2024/06/11/hexo%E6%92%B0%E5%86%99%E6%96%87%E7%AB%A0%E9%80%9A%E5%B8%B8%E4%BD%BF%E7%94%A8%20Markdown%20%E8%AF%AD%E6%B3%95/</url>
